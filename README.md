@@ -19,3 +19,5 @@ To check available moderation commands go through code or contact me: [Instagram
 
 <h2>Contributers:</h2>
 <img src="https://contrib.rocks/image?repo=yogeshxd/chuck" />
+
+bundh marao
