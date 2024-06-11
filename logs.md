@@ -1,4 +1,8 @@
-<h4> Logs </h4>
+<h4> Logs (Bottoms Up Approch)</h4>
+
+- **Combined Pause and Resume Buttons.**
+
+- **Added looping feature to music player.**
 
 - **Added Valorant stat commands.**
 

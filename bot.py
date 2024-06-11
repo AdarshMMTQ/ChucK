@@ -18,19 +18,13 @@ intents.members = True
 
 bot = commands.Bot(command_prefix=config.ext, intents=intents)
 
-#bot = commands.Bot(command_prefix=['Du '])
 bot.remove_command('help')
-# initial_extensions = ['cogs.admin', 'cogs.chat', 'cogs.music', 'cogs.random', 'cogs.chatai']
 
 async def load_extensions():
     for filename in os.listdir("cogs"):
         if filename.endswith(".py"):
             # cut off the .py from the file name
             await bot.load_extension(f"cogs.{filename[:-3]}")
-
-##if __name__ == '__main__':
-##    for extension in initial_extensions:
-##        bot.load_extension(extension)
 
 @bot.event
 async def on_ready():
@@ -44,9 +38,6 @@ async def on_ready():
     start_time = time.time()
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='Du help | Du invite'))
 
-@bot.command(hidden=True)
-async def reload(ctx, extension):
-    await bot.reload_extension(extension)
 
 @bot.command(pass_context=True)
 async def uptime(ctx):
@@ -61,6 +52,7 @@ async def uptime(ctx):
     except discord.HTTPException:
         await ctx.send("Current uptime: " + text)
 
+#Use only one at a time
 #Old welcomer
 @bot.event
 async def on_member_join(member):
